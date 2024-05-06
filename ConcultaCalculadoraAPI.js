@@ -14,27 +14,10 @@ function Calcular(){
             return response.json();
         })
         .then(data => {
-
+            let valorResult = document.getElementById('result');
+            valorResult.textContent = (data);
         })
         .catch(error => {
             console.error('Erro:', error);
         });
-}
-
-function Autores(){
-    const apiUrl = 'http://127.0.0.1:5000/autores';
-
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao chamar a API: ' + response.status);
-                }
-                return response.json();
-            })
-            .then(data => {
-
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
 }

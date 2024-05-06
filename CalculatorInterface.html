@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StyleCalculatorInterface.css">
-    <title>Caculadora em Python ----c========B</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Caculadora em Python</title>
 </head>
 <body>
-    <select name="tipo" id="tipo">
-        <option value="1">Decimal para qualquer base</option>
-        <option value="2">Qualquer base para decimal</option>
-    </select>
-    <label>Numero</label>
-    <input type="text" id="numero"/>
-    <label>Base</label>
-    <input type="text" id="base"/>
-    <button onclick="Calcular()">Calcular</button>
+    <div class="header">
+        <div class="inner-header flex">
+            <div class="Box-screen">
+                <div class="CenterText">
+                    <h1><strong>Calculadora :]</strong></h1>
+                    <select name="tipo" id="tipo" class="Selection">
+                        <option value="1">Decimal para qualquer base</option>
+                        <option value="2">Qualquer base para decimal</option>
+                    </select>
+                    <input type="text" id="numero" class="textBoxNumber" placeholder="Número" data-ls-module="charCounter"/>
+                    <input type="text" id="base" class="textBoxNumber" placeholder="Base" data-ls-module="charCounter"/>
+                    <button class="btn-Buscar" id="Buscar"onclick="Calcular()" >Calcular</button>
+                    <p>Resultado:</p>
+                    <h2 id="result"><strong></strong></h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <svg class="waves" xmls="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999" viewBox="0 24 150 28" preserveAspectRatio="none"
+                shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"/>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>
+                </g>
+            </svg>
+        </div>
+    </div>
 
     <script src="ConcultaCalculadoraAPI.js"></script>
 </body>
