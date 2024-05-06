@@ -1,0 +1,40 @@
+function Calcular(){
+
+    let tipo = document.getElementById('tipo').value;
+    let numero = document.getElementById('numero').value;
+    let base = document.getElementById('base').value;
+    const apiUrl = "http://127.0.0.1:5000/calcular/"+numero+"/"+base+"/"+tipo;
+
+    // Chama a API usando a Fetch API
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao chamar a API: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+        });
+}
+
+function Autores(){
+    const apiUrl = 'http://127.0.0.1:5000/autores';
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao chamar a API: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+}
