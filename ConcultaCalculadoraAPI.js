@@ -3,7 +3,7 @@ function Calcular(){
     let tipo = document.getElementById('tipo').value;
     let numero = document.getElementById('numero').value;
     let base = document.getElementById('base').value;
-    const apiUrl = "http://127.0.0.1:5000/calcular/"+numero+"/"+base+"/"+tipo;
+    const apiUrl = "YourLocalHost/calcular/"+numero+"/"+base+"/"+tipo;
 
     // Chama a API usando a Fetch API
     fetch(apiUrl)
